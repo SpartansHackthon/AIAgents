@@ -1,0 +1,32 @@
+[2024-03-28 10:15:23] INFO Starting application server on port 8080
+[2024-03-28 10:15:24] INFO Loading configuration from config.properties
+[2024-03-28 10:15:25] INFO Database connection pool initialized with 20 connections
+[2024-03-28 10:15:26] WARNING Slow database query detected: SELECT * FROM users took 2500ms
+[2024-03-28 10:15:27] INFO Application ready to accept requests
+[2024-03-28 10:16:42] ERROR Failed to connect to database at localhost:5432
+[2024-03-28 10:16:42] ERROR java.sql.SQLException: Connection refused (Connection refused)
+[2024-03-28 10:16:42] ERROR    at java.sql.DriverManager.getConnection(DriverManager.java:684)
+[2024-03-28 10:16:42] ERROR    at com.app.db.ConnectionPool.getConnection(ConnectionPool.java:45)
+[2024-03-28 10:16:43] WARNING Retrying database connection attempt 1/3
+[2024-03-28 10:16:45] WARNING Retrying database connection attempt 2/3
+[2024-03-28 10:16:47] ERROR Retrying database connection attempt 3/3 - FAILED
+[2024-03-28 10:16:48] FATAL Unable to establish database connection. Application cannot proceed.
+[2024-03-28 10:16:48] ERROR Stack trace for FATAL error:
+[2024-03-28 10:16:48] ERROR java.sql.SQLException: Connection refused
+[2024-03-28 10:16:48] ERROR    at com.app.db.ConnectionPool.initialize(ConnectionPool.java:52)
+[2024-03-28 10:16:48] ERROR    at com.app.Application.startup(Application.java:78)
+[2024-03-28 10:16:48] ERROR    at com.app.Main.main(Main.java:23)
+[2024-03-28 10:16:50] INFO Application shutdown initiated
+[2024-03-28 10:17:15] WARNING Checking database service status...
+[2024-03-28 10:17:16] WARNING Attempting to restart with fallback configuration
+[2024-03-28 10:17:17] ERROR Cannot read file: /etc/app/backup-config.xml (File not found)
+[2024-03-28 10:17:17] ERROR FileNotFoundException: /etc/app/backup-config.xml (No such file or directory)
+[2024-03-28 10:17:18] INFO Using default configuration
+[2024-03-28 10:17:20] WARNING Authentication token expired for service integration
+[2024-03-28 10:17:21] ERROR API request failed with status 401 Unauthorized
+[2024-03-28 10:17:21] ERROR Response body: {"error": "Invalid or expired authentication token"}
+[2024-03-28 10:17:22] INFO Retrying with refreshed token
+[2024-03-28 10:17:23] WARNING Memory usage at 87% - consider optimization
+[2024-03-28 10:17:24] WARNING Heap size approaching maximum: 1850MB / 2048MB
+[2024-03-28 10:17:45] ERROR OutOfMemoryError in request processing
+[2024-03-28 10:17:46] ERROR java.lang.OutOfMemoryError: Java heap space
