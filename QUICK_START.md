@@ -1,4 +1,4 @@
-# Multi-Agent Log Analyzer - Quick Start Guide
+s# Multi-Agent Log Analyzer - Quick Start Guide
 
 ## 5-Minute Setup
 
